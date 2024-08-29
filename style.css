@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-sedan: hsl(31, 77%, 52%);
+    --bg-suvs: hsl(184, 100%, 22%);
+    --bg-luxury: hsl(179, 100%, 13%);
+
+    --paragraphs: hsla(0, 0%, 100%, 0.75);
+    --bg-headings-buttons: hsl(0, 0%, 95%);
+
+    --primary-font: 'Lexend Deca', sans-serif;
+    --secondary-font: 'Big Shoulders Display', sans-serif;
+}
+
+body {
+    font-family: var(--primary-font);
+    min-height: 100vh;
+    background-color: var(--bg-headings-buttons);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.sedans {
+    background-color: var(--bg-sedan);
+}
+
+.suvs {
+    background-color: var(--bg-suvs);
+}
+
+.luxury {
+    background-color: var(--bg-luxury);
+}
+
+.box {
+    padding: 40px;
+}
+
+.box h2 {
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
+    color: var(--bg-headings-buttons);
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.box p {
+    color: var(--paragraphs);
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.box a {
+    text-decoration: none;
+    background-color: var(--bg-headings-buttons);
+    border-radius: 25px;
+    padding: 12px 24px;
+    margin-top: 50px;
+    display: inline-block;
+    border: 2px solid var(--bg-headings-buttons);
+    transition: all .4s ease-in-out;
+}
+
+.box a:hover {
+    color: var(--bg-headings-buttons);
+    background-color: transparent;
+}
+
+.sedans a {
+    color: var(--bg-sedan);
+}
+
+.suvs a {
+    color: var(--bg-suvs);
+}
+
+.luxury a {
+    color: var(--bg-luxury);
+}
+
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .wrapper {
+        margin: 1.5rem .4rem;
+    }
+}
